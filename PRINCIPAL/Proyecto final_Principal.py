@@ -45,6 +45,7 @@ def web_scraping():
 
     navegador.quit()
     df = pd.DataFrame(data)
+    df.to_csv("DATASETS/Dataframe_Peliculas")
     print(df)
 
 
