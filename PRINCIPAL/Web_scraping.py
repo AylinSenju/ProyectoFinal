@@ -64,7 +64,7 @@ def web_scraping_series():
 
         for j in series:
             nombre = j.find("a", attrs={"class": "meta-title-link"})
-            creador = j.find("a", attrs={"class": "meta-body-item meta-body-direction"})
+            creador = j.find("div", attrs={"class": "meta-body-item meta-body-direction"})
             calificacion = j.find("span", attrs={"class": "stareval-note"})
             genero = j.find("a", attrs={"class": "xXx dark-grey-link"})
 
@@ -73,9 +73,9 @@ def web_scraping_series():
             data["calificacion"].append(calificacion.text if calificacion else "N/A")
             data["genero"].append(genero.text if genero else "N/A")
 
-        btnsiguiente = WebDriverWait(navegador, 10).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, "xXx button button-md button-primary-full button-right"))
-            )
+        btnsiguiente = WebDriverWait(navegador, 20).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, ".xXx.button.button-md.button-primary-full.button-right"))
+        )
         navegador.execute_script("arguments[0].click();", btnsiguiente)
         time.sleep(3)
 
