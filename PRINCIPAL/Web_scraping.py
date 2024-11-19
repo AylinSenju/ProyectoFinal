@@ -81,7 +81,7 @@ def web_scraping_series():
 
     navegador.quit()
     df_series = pd.DataFrame(data)
-    df_series.to_csv("datasets/Dataframe_Series")
+    df_series.to_csv("DATASETS/Dataframe_Series")
     print(df_series)
 
 
