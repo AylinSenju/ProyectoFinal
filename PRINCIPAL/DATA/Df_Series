@@ -1,0 +1,166 @@
+,nombre,creador,calificacion,genero
+0,Breaking Bad,Vince Gilligan,"4,7",Drama
+1,Juego de Tronos,D.B. Weiss,"4,0",Drama
+2,Los Soprano,David Chase,"4,5",Drama
+3,Peaky Blinders,Steven Knight,"4,5",Crimen
+4,Chernobyl,Craig Mazin,"4,0",Drama
+5,Vikingos,Michael Hirst,"3,6",Aventura
+6,Los Simpson,Matt Groening,"4,5",Animación
+7,Hermanos de Sangre,Steven Spielberg,"4,5",Drama
+8,Love is in the air,Ayşe Kutlu,"4,4",Drama
+9,Hijos de la anarquía,Kurt Sutter,"4,4",Crimen
+10,Dragon Ball Z,Takao Koyama,"4,4",Acción
+11,The Wire,David Simon (II),"4,4",Crimen
+12,Los Originales,Julie Plec,"4,4",Drama
+13,Sherlock,Steven Moffat,"4,4",Crimen
+14,Stranger Things,Matt Duffer,"4,4",Drama
+15,Erkenci Kus (Pájaro soñador),Ayşe Kutlu,"4,4",Comedia
+16,Death Note,Ayşe Kutlu,"4,4",Animación
+17,The Big Bang Theory,Bill Prady,"4,4",Comedia
+18,Friends,David Crane,"4,4",Comedia
+19,House,David Shore,"4,4",Comedia dramática
+20,The Mandalorian,Jon Favreau,"4,4",Aventura
+21,Outlander,Ronald D. Moore,"4,4",Fantasía
+22,Sobrenatural,Eric Kripke,"4,4",Drama
+23,Dexter,James Manos Jr,"4,4",Drama
+24,Percy Jackson y los Dioses del Olimpo,Rick Riordan,"4,4",Aventura
+25,Naruto Shippuden,Liam O'Brien (I),"4,4",Aventura
+26,Ataque a los Titanes,Hiroshi Seko,"4,4",Acción
+27,Dragon Ball,Hiroshi Seko,"4,4",Acción
+28,Suits: la clave del éxito,Aaron Korsh,"4,4",Comedia
+29,Te alquilo mi amor (Kiralik Ask),Aaron Korsh,"4,4",Comedia
+30,The Walking Dead,Frank Darabont,"4,4",Drama
+31,The Good Doctor,David Shore,"4,4",Drama
+32,Spartacus: Sangre y arena,Steven S. DeKnight,"4,4",Drama
+33,Teen Wolf,Jeff Davis (V),"4,4",Drama
+34,Demon Slayer: Kimetsu no Yaiba,Koyoharu Gotouge,"4,4",Acción
+35,Better Call Saul,Vince Gilligan,"4,4",Crimen
+36,Perdidos,Damon Lindelof,"4,4",Acción
+37,Arcane,Alex Yee,"4,4",Acción
+38,Mad Men,Matthew Weiner,"4,4",Drama
+39,Anne with an E,Moira Walley-Beckett,"4,4",Drama
+40,Naruto,Michiko Yokote,"4,4",Aventura
+41,Crónicas vampíricas,Julie Plec,"4,4",Drama
+42,Fringe (Al límite),J.J. Abrams,"4,3",Drama
+43,Dark,Baran bo Odar,"4,3",Drama
+44,Daredevil,Drew Goddard,"4,1",Acción
+45,Gambito de Dama,Scott Frank,"4,3",Drama
+46,Rick y Morty,Dan Harmon,"4,3",Aventura
+47,The Boys,Eric Kripke,"4,3",Acción
+48,The Last Of Us,Neil Druckmann,"4,3",Acción
+49,Chicago PD,Dick Wolf,"4,3",Crimen
+50,Lucifer,Tom Kapinos,"4,3",Crimen
+51,Amor en blanco y negro,Eylem Canpolat,"4,3",Drama
+52,Dolunay (Luna Llena),Ayşen Günsu,"4,3",Comedia
+53,Jóvenes Altezas,Lisa Ambjörn,"4,3",Drama
+54,Anatomía de Grey,Shonda Rhimes,"4,3",Drama
+55,Downton Abbey,Julian Fellowes,"4,3",Drama
+56,Prison Break,Paul Scheuring,"3,3",Drama
+57,Black Mirror,Charlie Brooker,"4,3",Drama
+58,Homeland,Gideon Raff,"4,3",Crimen
+59,This is Us,Dan Fogelman,"4,3",Drama
+60,Euphoria,Sam Levinson,"4,3",Drama
+61,The Blacklist,Jon Bokenkamp,"4,3",Crimen
+62,Legacies,Julie Plec,"4,3",Aventura
+63,Hannibal,Bryan Fuller,"4,3",Drama
+64,Chicago Fire,Michael Brandt,"4,3",Acción
+65,Mentes criminales,Jeff Davis (V),"4,3",Crimen
+66,Merlí,Héctor Lozano,"4,3",Drama
+67,The Last Kingdom,Stephen Butchard,"4,3",Drama
+68,Avatar: La Leyenda de Aang,Michael Dante DiMartino,"4,3",Acción
+69,Big Little Lies,Liane Moriarty,"4,3",Drama
+70,Expediente X,Chris Carter,"4,3",Crimen
+71,BEAT,Marco Kreuzpaintner,"3,3",Drama
+72,Con olor a fresas,Aslı Zengin,"4,3",Romántico
+73,Cómo conocí a vuestra madre,Craig Thomas,"4,3",Comedia
+74,El Mentalista,Bruno Heller,"4,3",Crimen
+75,Grimm,David Greenwalt,"4,3",Crimen
+76,Sex Education,Laurie Nunn,"4,3",Comedia
+77,House of Cards,Beau Willimon,"4,3",Drama
+78,Castle,Andrew Marlowe,"4,2",Comedia
+79,Pequeñas mentirosas,I. Marlene King,"4,2",Drama
+80,La Casa de Papel,Álex Pina,"4,2",Acción
+81,Modern Family,Steven Levitan,"4,2",Comedia
+82,American Horror Story,Ryan Murphy,"4,2",Drama
+83,Shameless (US),Paul Abbott,"4,2",Comedia
+84,La Casa del Dragón,George R.R. Martin,"4,2",Drama
+85,Los 100,Jason Rothenberg,"3,0",Aventura
+86,Cómo defender a un asesino,Peter Nowalk,"4,2",Drama
+87,True Detective,Nic Pizzolatto,"4,2",Crimen
+88,Gossip Girl,Josh Schwartz,"4,2",Drama
+89,Bates Motel,Anthony Cipriano,"4,2",Crimen
+90,Sense8,Lilly Wachowski,"4,2",Drama
+91,El hombre equivocado,Aslı Zengin,"4,2",Comedia
+92,Penny Dreadful,John Logan,"4,2",Crimen
+93,Riverdale,Roberto Aguirre-Sacasa,"4,2",Drama
+94,Good Omens,Neil Gaiman,"4,2",Comedia
+95,Yellowstone,Taylor Sheridan,"4,2",Drama
+96,La maldición de Hill House,Mike Flanagan,"4,2",Drama
+97,Boardwalk Empire,Terence Winter,"4,2",Crimen
+98,The Pacific,Laurence Andries,"4,2",Histórico
+99,Orphan Black,Graeme Manson,"4,2",Ciencia ficción
+100,Doctor Who (2005),Russell T Davies,"4,2",Aventura
+101,Narcos,Carlo Bernard,"4,6",Biopic
+102,The Flash,Greg Berlanti,"4,2",Acción
+103,Succession,Jesse Armstrong,"4,2",Drama
+104,Chucky,Don Mancini,"4,2",Terror
+105,Succession,Jesse Armstrong,"4,2",Drama
+106,Chucky,Don Mancini,"4,2",Terror
+107,Estación 19,Stacy McKee,"4,2",Drama
+108,Roma,John Milius,"4,2",Acción
+109,Brooklyn Nine-Nine,Dan Goor,"4,2",Comedia
+110,Bruja Escarlata y Visión,Jac Schaeffer,"4,2",Acción
+111,The Office (US),Ricky Gervais,"4,2",Comedia
+112,Spartacus: Dioses de la Arena,Steven S. DeKnight,"4,2",Épico
+113,Taboo,Steven Knight,"4,2",Drama
+114,Kara Sevda (Amor eterno),Burcu Görgün Toptaş,"4,2",Drama
+115,Arrow,Andrew Kreisberg,"4,2",Acción
+116,El Príncipe de Bel-Air,Andy Borowitz,"4,2",Comedia
+117,Revenge,Mike Kelley,"4,2",Drama
+118,SEAL Team,Benjamin Cavell,"4,2",Acción
+119,One Piece,Michiru Shimada,"4,2",Aventura
+120,Westworld,Jonathan Nolan,"4,2",Drama
+121,Hercai,Eda Tezcan,"4,2",Drama
+122,Scorpion,Nick Santora,"4,2",Drama
+123,Vis a Vis,Daniel Écija,"4,2",Drama
+124,Bones,Hart Hanson,"4,2",Crimen
+125,Miércoles,Alfred Gough,"4,2",Comedia
+126,Twin Peaks,David Lynch,"4,2",Crimen
+127,The Crown,Peter Morgan,"4,7",Biopic
+128,Cobra Kai,Josh Heald,"4,2",Acción
+129,Halo,Kyle Killen,"4,2",Acción
+130,Gran Hotel (2011),Ramón Campos,"4,2",Drama
+131,Blindspot,Martin Gero,"4,2",Acción
+132,MINDHUNTER,Joe Penhall,"4,2",Crimen
+133,Loki,Michael Waldron,"4,2",Aventura
+134,Érase una vez,Adam Horowitz,"4,2",Aventura
+135,Fugitiva (Sen Anlat Karadeniz),Adam Horowitz,"4,2",Drama
+136,"En todas partes, tú",Deniz Yeşilgün,"4,2",Comedia
+137,Sombra y Hueso,Eric Heisserer,"4,2",Acción
+138,Invencible,Robert Kirkman,"4,2",Acción
+139,The Walking Dead: The Ones Who Live,Scott M. Gimple,"4,2",Terror
+140,BoJack Horseman,Raphael Bob-Waksberg,"4,2",Animación
+141,Fallout,Lisa Joy,"4,2",Acción
+142,SPY x FAMILY,Lisa Joy,"4,1",Acción
+143,Banshee,Jonathan Tropper,"4,1",Drama
+144,Fargo (2014),Noah Hawley,"4,1",Comedia
+145,Heartstopper,Alice Oseman,"4,1",Drama
+146,The Rookie,Alexi Hawley,"4,1",Crimen
+147,Outer Banks,Shannon Burke,"4,1",Acción
+148,The Act,Nick Antosca,"4,1",Drama
+149,The Witcher,Lauren Schmidt Hissrich,"4,1",Aventura
+150,Mr. Robot,Sam Esmail,"4,1",Drama
+151,El Ministerio del Tiempo,Javier Olivares,"4,1",Aventura
+152,Malcolm in the Middle,Linwood Boomer,"4,1",Comedia
+153,Gotham (2014),Bruno Heller,"4,1",Acción
+154,Estamos muertos,Sung-il Chun,"4,1",Terror
+155,Mujer (Kadin),Hande Altaylı,"4,1",Drama
+156,Orange Is the New Black,Jenji Kohan,"4,1",Comedia
+157,Futurama,Matt Groening,"4,1",Animación
+158,DAHMER - Monstruo: La historia de Jeffrey Dahmer,Ryan Murphy,"4,1",Biopic
+159,Marvel's The Punisher,Steve Lightfoot,"4,1",Acción
+160,Ley y orden: Unidad de víctimas especiales,Dick Wolf,"4,1",Crimen
+161,Orgullo y prejuicio,Dick Wolf,"4,1",Histórico
+162,Diriliş Ertuğrul,Atilla Engin,"4,1",Histórico
+163,Glee,Ryan Murphy,"4,1",Comedia
+164,The Umbrella Academy,Steve Blackman,"4,1",Acción
