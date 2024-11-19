@@ -86,5 +86,5 @@ def web_scraping_series():
 
 
 if __name__ == '__main__':
-    #web_scraping_peliculas()
+    web_scraping_peliculas()
     web_scraping_series()
