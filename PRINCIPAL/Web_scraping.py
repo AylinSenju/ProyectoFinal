@@ -27,17 +27,30 @@ def web_scraping_peliculas():
         for j in peliculas:
             nombre = j.find("a", attrs={"class": "meta-title-link"})
             estreno = j.find("span", attrs={"class": "date"})
-            director = j.find("div", attrs={"class": "meta-body-item meta-body-direction"})
             calificacion = j.find("span", attrs={"class": "stareval-note"})
             genero= j.find("a",attrs= {"class":"xXx dark-grey-link"})
-            duracion = j.find("div",attrs= {"class":"meta-body-item meta-body-info"})
+            info_director = j.find_all("div", attrs={"class": "meta-body-item meta-body-direction"})
+
+            #Obtencion de nombre del director
+            for k in info_director:
+               director_nombre = k.find("a",attrs={"class":"xXx dark-grey-link"})
+
+            #Obtencion de la duracion
+            duracion_info = j.find("div", attrs={"class":"meta-body-item meta-body-info"})
+
+            #Seleccionamos_todo el texto y despues separamos por "|" para obtener exactamente la duracion
+            duracion_info2 = duracion_info.get_text(strip=True)
+            partes = duracion_info2.split("|")
+            duracion2= partes[1] #La segunda posicion tiene la duracion en horas y minutos
+
+
 
             data["nombre"].append(nombre.text if nombre else "N/A")
             data["estreno"].append(estreno.text if estreno else "N/A")
-            data["director"].append(director.text if director else "N/A")
-            data["calificacion"].append(calificacion.text if calificacion else "N/A")
+            data["director"].append(director_nombre.text if info_director else "N/A")
+            data["calificacion"].append(calificacion.text )
             data["genero"].append(genero.text if genero else "N/A")
-            data["duracion"].append(duracion.text if duracion else "N/A")
+            data["duracion"].append(duracion2 if duracion else "N/A")
         btnsiguiente = WebDriverWait(navegador, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "a.xXx.button.button-md.button-primary-full.button-right"))
         )
         navegador.execute_script("arguments[0].click();", btnsiguiente)
@@ -45,7 +58,7 @@ def web_scraping_peliculas():
 
     navegador.quit()
     df = pd.DataFrame(data)
-    df.to_csv("datasets/Dataframe_Pelucilas")
+    df.to_csv("Data/Df_Peliculas")
     print(df)
 
 def web_scraping_series():
@@ -64,12 +77,18 @@ def web_scraping_series():
 
         for j in series:
             nombre = j.find("a", attrs={"class": "meta-title-link"})
-            creador = j.find("div", attrs={"class": "meta-body-item meta-body-direction"})
+            creador = j.find("a", attrs={"class": "xXx dark-grey-link"})
             calificacion = j.find("span", attrs={"class": "stareval-note"})
             genero = j.find("a", attrs={"class": "xXx dark-grey-link"})
 
+            info_creador = j.find_all("div", attrs={"class": "meta-body-item meta-body-direction"})
+
+            # Obtencion de nombre del director
+            for k in info_creador:
+                creador_nombre = k.find("a", attrs={"class": "xXx dark-grey-link"})
+
             data["nombre"].append(nombre.text if nombre else "N/A")
-            data["creador"].append(creador.text if creador else "N/A")
+            data["creador"].append(creador_nombre.text if creador else "N/A")
             data["calificacion"].append(calificacion.text if calificacion else "N/A")
             data["genero"].append(genero.text if genero else "N/A")
 
@@ -81,10 +100,10 @@ def web_scraping_series():
 
     navegador.quit()
     df_series = pd.DataFrame(data)
-    df_series.to_csv("DATASETS/Dataframe_Series")
+    df_series.to_csv("DATA/Df_Series")
     print(df_series)
 
 
 if __name__ == '__main__':
-    web_scraping_peliculas()
     web_scraping_series()
+
