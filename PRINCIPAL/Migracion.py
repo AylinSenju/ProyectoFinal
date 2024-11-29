@@ -69,19 +69,9 @@ class Migracion1:
                 print(e)
 
 
-
-
-
-
-
-
-
-
-
-
 if __name__=="__main__":
-    df=pd.read_csv("DATA/Df_Series",decimal='.')
-    migracion=Migracion1("localhost","root","luiylui2004","Proyecto_final",df)
+    df=pd.read_csv("DATA/Df_Series_Limpio")
+    migracion=Migracion1("localhost","root","luiylui2004","cinema_bd",df)
     migracion.conectar_servidor()
     migracion.crear_database()
     migracion.conectar_database()
