@@ -1,4 +1,7 @@
+
+
 import pandas as pd
+import locale
 
 
 #Esta funcion ayuda a detectar cuanto porcentaje se tiene de valores nulos dentro de el df,
@@ -46,6 +49,24 @@ def eliminar_repetidos(df):
     return f"Los renglones eliminados que son duplicados fueron {eliminados}"
 
 
+def convertir_fecha(df):
+
+    """
+    Recibe como parametro un dataframe, en este caso peliculas, y despues connvierte la cadena
+    de la columnas a un formato fecha. con ayuda de local, que lo que hace es establecer la
+    configuración regional para español
+
+    """
+    locale.setlocale(locale.LC_TIME, 'es_ES.UTF-8')
+
+    df['estreno'] = pd.to_datetime(df['estreno'], format='%d de %B de %Y').dt.strftime('%Y-%m-%d')
+
+
+def limpiar_calificacion(df:pd.DataFrame):
+    """
+    Limpia las calififaciones, quitando las comas, asi como cambiando la coma por un punto
+    """
+    df["calificacion"] = df["calificacion"].fillna("").replace({r'"': '', r',': '.'}, regex=True)
 
 
 
@@ -85,8 +106,17 @@ if __name__ == "__main__":
 
 
 
-    dataframe_Series.to_csv("DATA/Df_Series_Limpio")
-    dataframe_Peliculas.to_csv("DATA/Df_Peliculas_Limpio")
+    convertir_fecha(dataframe_Peliculas)
+
+    df_peliculas_limpio = limpiar_calificacion(dataframe_Peliculas)
+    df_series_limpio = limpiar_calificacion(dataframe_Series)
+
+
+    df_peliculas_limpio = dataframe_Peliculas.drop(columns=['Unnamed: 0'])
+    df_series = dataframe_Series.drop(columns=["Unnamed: 0"])
+
+    df_series.to_csv("DATA/Df_Series_Limpio")
+    df_peliculas_limpio.to_csv("DATA/Df_Peliculas_Limpio")
 
 
 

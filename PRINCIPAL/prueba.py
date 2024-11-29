@@ -5,5 +5,7 @@ print("Prueba Javier")
 
 lista=[1,2,3]
 
-for i in lista:
-    print(1)
+nombre = "'Biron'"
+nuevo_nombre = nombre.
+print(nombre)
+print(nuevo_nombre)
