@@ -1,4 +1,4 @@
-
+from unittest.mock import inplace
 
 import pandas as pd
 import locale
@@ -70,6 +70,12 @@ def limpiar_calificacion(df:pd.DataFrame):
 
 
 
+def drop_na(df: pd.DataFrame):
+    df.dropna(inplace=True)
+
+
+
+
 if __name__ == "__main__":
     dataframe_Peliculas = pd.read_csv("DATA/Df_Peliculas")
     dataframe_Series = pd.read_csv("DATA/Df_Series")
@@ -104,6 +110,7 @@ if __name__ == "__main__":
     print("Las columnas  eliminadas de Series fueron: ",columnas_eliminar_Series)
     print("Las columnas a eliminar de Peliculas fueron: ",columnas_eliminar_Peliculas)
 
+    drop_na(dataframe_Peliculas)
 
 
     convertir_fecha(dataframe_Peliculas)
