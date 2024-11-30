@@ -22,4 +22,4 @@ Los datos extraídos serán procesados ​​para garantizar su calidad y consis
 -Normalización (formato uniforme en nombres y fechas).
 -Estructuración (organización en un formato adecuado para la base de datos).
 3. **Carga:**
-Finalmente, los datos transformados serán migrados a una base de datos relacional, donde podrán ser consultados de manera eficiente. Además, se diseñará un tablero interactivo para visualizar y analizar la información recopilada, proporcionando información útil para futuros análisis.
+Finalmente, los datos transformados serán migrados a una base de datos relacional, donde podrán ser consultados de manera eficiente. Además, se diseñará un tablero interactivo para visualizar y analizar la información recopilada, proporcionando información útil para futuros análisis. 
