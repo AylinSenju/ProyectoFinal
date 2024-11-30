@@ -33,6 +33,7 @@ El objetivo es organizar y almacenar esta información en una base de datos estr
         <li>Normalización (formato uniforme en nombres y fechas).</li> 
         <li>Estructuración (organización en un formato adecuado para la base de datos).</li>
       </ul>
+    <p></p>
     <li><b>Carga:</b></li>
     <p>Finalmente, los datos transformados serán migrados a una base de datos relacional, donde podrán ser consultados de manera eficiente. Además, se diseñará un tablero interactivo para visualizar y analizar la información recopilada, proporcionando información útil para futuros análisis. </p>
   </ol>
