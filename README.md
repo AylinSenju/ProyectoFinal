@@ -25,8 +25,7 @@ El objetivo es organizar y almacenar esta información en una base de datos estr
   <p>El proyecto constará en tres etapas clave, basadas en el proceso de ETL (Extracción, Transformación, Carga) , que se describe a continuación:</p>
   <ol>
     <li><b>Extracción:</b></li> <p>En esta etapa, se realizará el proceso de web scraping para recopilar información clave de películas y series</p>
-    <li><b>Transformación:</b></li><p>Los datos extraídos serán procesados ​​para garantizar su calidad y consistencia, incluyendo:</p>
-    <ul>
+    <li><b>Transformación:</b></li><p>Los datos extraídos serán procesados ​​para garantizar su calidad y consistencia, incluyendo:</p><ul>
       <li>Limpieza de datos (eliminación de duplicados y datos incompletos).</li>
       <li>Normalización (formato uniforme en nombres y fechas).</li>
       <li>Estructuración (organización en un formato adecuado para la base de datos).</li>
@@ -34,6 +33,7 @@ El objetivo es organizar y almacenar esta información en una base de datos estr
     <li><b>Carga:</b></li><p>Finalmente, los datos transformados serán migrados a una base de datos relacional, donde podrán ser consultados de manera eficiente. Además, se diseñará un tablero interactivo para visualizar y analizar la información recopilada, proporcionando información útil para futuros análisis. </p>
   </ol>
 </div>
+<hr>
 <div>
   <h3><b>Resultados Esperados</b></h3>
   <p>Los usuarios podrán acceder a una plataforma que les permitirá extraer, organizar y mostrar de manera eficiente datos clave de películas y series. El sistema debe poder recopilar información precisa a través del web scraping, almacenar esa información en una base de datos con precisión y proporcionar a los usuarios un panel interactivo para explorar estos datos, lo que facilita la identificación de patrones, tendencias y la toma de decisiones en la industria del entretenimiento.
