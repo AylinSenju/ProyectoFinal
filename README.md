@@ -28,7 +28,7 @@ El objetivo es organizar y almacenar esta información en una base de datos estr
     <p>En esta etapa, se realizará el proceso de web scraping para recopilar información clave de películas y series</p>
     <li><b>Transformación:</b></li>
     <p>Los datos extraídos serán procesados ​​para garantizar su calidad y consistencia, incluyendo:</p>
-      <ul">
+      <ul>
         <li>Limpieza de datos (eliminación de duplicados y datos incompletos).</li>
         <li>Normalización (formato uniforme en nombres y fechas).</li> 
         <li>Estructuración (organización en un formato adecuado para la base de datos).</li>
