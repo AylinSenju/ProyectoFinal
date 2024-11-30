@@ -1,7 +1,7 @@
 <div align="center">
-# **Proyecto Final de Programacion**
+<H3> Proyecto Final </H3>
 </div>
----
+
 ## Integrantes:
 - Gonzales Preciado Angel Javier
 - Gonzales Ramirez Biron Jahdiel
