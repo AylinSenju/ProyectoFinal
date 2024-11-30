@@ -1,5 +1,5 @@
 <div align="center">
-# **Proyecto Final**
+<h1>Proyecto Final</h1>
 </div>
 
 ## Integrantes:
