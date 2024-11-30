@@ -1,7 +1,7 @@
 <div align="center">
 <h1>Proyecto Final</h1>
 </div>
----
+<hr>
 ## Integrantes:
 - Gonzales Preciado Angel Javier
 - Gonzales Ramirez Biron Jahdiel
