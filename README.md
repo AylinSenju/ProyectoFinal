@@ -2,7 +2,7 @@
 <h1>Proyecto Final</h1>
 </div>
 <div>
-  <h3>Integrantes:</h3>
+  <h3> Integrantes: </h3>
   <div>
     <ul>
       <li>Gonzales Preciado Angel Javier</li>
@@ -14,15 +14,25 @@
   </div>
 </div> 
 <hr>
-
-# Proposito del Proyecto
-El objetivo de este proyecto es recopilar información clave sobre películas y series de televisión mediante técnicas de navegación web, con especial énfasis en datos como nombre, valoración, género y director.
-El objetivo es organizar y almacenar esta información en una base de datos estructurada que facilite el análisis, permitiéndote identificar tendencias, descubrir géneros populares o analizar tu trabajo. Luego se creará un panel interactivo que proporcionará información transparente y accesible sobre los datos recopilados, mejorando la toma de decisiones en proyectos cinematográficos y de entretenimiento.
----
+<div>
+  <h3> Proposito del Proyecto </h3>
+  <p>El objetivo de este proyecto es recopilar información clave sobre películas y series de televisión mediante técnicas de navegación web, con especial énfasis en datos como nombre, valoración, género y director.
+El objetivo es organizar y almacenar esta información en una base de datos estructurada que facilite el análisis, permitiéndote identificar tendencias, descubrir géneros populares o analizar tu trabajo. Luego se creará un panel interactivo que proporcionará información transparente y accesible sobre los datos recopilados, mejorando la toma de decisiones en proyectos cinematográficos y de entretenimiento.</p>
+</div>
+<hr>
+<div>
+  <h3> Etapas </h3>
+  <p>El proyecto constará en tres etapas clave, basadas en el proceso de ETL (Extracción, Transformación, Carga) , que se describe a continuación:</p>
+  <ol>
+    <li>Extraccion:</li>
+    <p>En esta etapa, se realizará el proceso de web scraping para recopilar información clave de películas y series</p>
+    <li>Transformación</li>
+    <p>Los datos extraídos serán procesados ​​para garantizar su calidad y consistencia, incluyendo:</p>
+    
+  </ol>
+</div>
 # Etapas
-El proyecto constará en tres etapas clave, basadas en el proceso de ETL (Extracción, Transformación, Carga) , que se describe a continuación:
-1. **Extraccion:** 
-En esta etapa, se realizará el proceso de web scraping para recopilar información clave de películas y series
+ 
 2. **Transformación:** 
 Los datos extraídos serán procesados ​​para garantizar su calidad y consistencia, incluyendo:
 -Limpieza de datos (eliminación de duplicados y datos incompletos).
