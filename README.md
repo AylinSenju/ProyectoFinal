@@ -1,12 +1,18 @@
 <div align="center">
 <h1>Proyecto Final</h1>
 </div>
-<hr>
-## Integrantes:
-- Gonzales Preciado Angel Javier
-- Gonzales Ramirez Biron Jahdiel
-- Mascareño Zendejas Aylin Yael 
-- Ramirez Velazquez Sherlyn
+<div>
+  <h4>Integrantes:</h4>
+  <div>
+    <ul>
+      <li>Gonzales Preciado Angel Javier</li>
+      <li>Gonzales Ramirez Biron Jahdiel</li>
+      <li>Mascareño Zendejas Aylin Yael</li>
+      <li>Ramirez Velazquez Sherlyn</li>
+      <li>Tapia Carro Angelica Vanesa</li>
+    </ul>
+  </div>
+</div> 
 ---
 # Proposito del Proyecto
 El objetivo de este proyecto es recopilar información clave sobre películas y series de televisión mediante técnicas de navegación web, con especial énfasis en datos como nombre, valoración, género y director.
