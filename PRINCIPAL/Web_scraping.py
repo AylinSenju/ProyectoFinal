@@ -50,7 +50,7 @@ def web_scraping_peliculas():
             data["director"].append(director_nombre.text if info_director else "N/A")
             data["calificacion"].append(calificacion.text )
             data["genero"].append(genero.text if genero else "N/A")
-            data["duracion"].append(duracion2 if duracion else "N/A")
+            data["duracion"].append(duracion2.text)
         btnsiguiente = WebDriverWait(navegador, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "a.xXx.button.button-md.button-primary-full.button-right"))
         )
         navegador.execute_script("arguments[0].click();", btnsiguiente)
