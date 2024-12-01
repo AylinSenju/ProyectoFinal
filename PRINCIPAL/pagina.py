@@ -28,7 +28,7 @@ def render_page_content(pathname):
 def menu_dashboard():
     sidebar = html.Div(
         [
-            html.Img(src="assets/imagenes/cine.jpg", width=220, height=100, style={"borderRadius": "15px"} ),
+            html.Img(src="assets/imagenes/cine.jpg", width=220, height=100, style={"borderRadius": "15px"}),
             html.Hr(),
             html.P("El portal al mundo del cine.", style={"className":"lead", "textAlign":"center", "color":"white"}),
             dbc.Nav(
