@@ -5,14 +5,15 @@ from click import style
 from dash import Input, Output, dcc, html, callback
 # import dashboard as ds
 import informacion as info
+import Peliculas as Dp
 
 # PAGINA PRINCIPAL
 @callback(Output("page-content", "children"), [Input("url", "pathname")])
 def render_page_content(pathname):
     if pathname == "/":
         return info.welcome()
-    # elif pathname == "/page-1": # DASHBOARD PELICULAS
-        # return d2.dashboard(), ds.dashboard()
+    elif pathname == "/page-1":  # DASHBOARD Peliculas
+        return Dp.test() #yoyo vanesa
     elif pathname == "/page-2": # DASHBOARD SERIES
         return html.P("Pagina :3")
     return html.Div(
