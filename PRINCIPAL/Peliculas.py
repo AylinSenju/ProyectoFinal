@@ -26,25 +26,19 @@ def distribucion_calificaciones(data):
     fig.update_traces(marker_color='#f5c518')
     return fig
 
+#ANTES ERA LA CUATROOO
+def distribucion_generos(data):
+    generos= data["genero"].value_counts().reset_index()
+    generos.columns=["genero", "cantidad"]
 
-def duracion_promedio_genero(data):
-    data = data.dropna(subset=["duracion_min"])
-    data["duracion_min"] = pd.to_numeric(data["duracion_min"], errors="coerce")
-
-    agrupado = data.groupby("genero", as_index=False)["duracion_min"].mean()
-
-    fig_dos = px.bar(agrupado,
-                 x="genero", y="duracion_min",
-                 title="Duracion Promedio de Peliculas por Genero",
-                 labels={"genero":"Genero", "duracion_min":"Duracion promedio(minutos)"},
-                 text="duracion_min"
-                 )
-    fig_dos.update_layout(
-        xaxis_title="Genero",
-        yaxis_title="Duracion promedio(minutos)",
+    fig_dos=px.pie(
+        generos,
+        names="genero",
+        values="cantidad",
+        title="Distribucion de Generos de Peliculas",
+        color="genero",
         template="plotly_dark"
     )
-    fig_dos.update_traces(marker_color="#f5c518", textposition="outside")
     return fig_dos
 
 
@@ -61,18 +55,26 @@ def estrenos_fecha(data):
     )
     return fig_tres
 
-def distribucion_generos(data):
-    generos= data["genero"].value_counts().reset_index()
-    generos.columns=["genero", "cantidad"]
 
-    fig_cuatro=px.pie(
-        generos,
-        names="genero",
-        values="cantidad",
-        title="Distribucion de Generos de Peliculas",
-        color="genero",
+#ANTES ERA LA DOSSS
+def duracion_promedio_genero(data):
+    data = data.dropna(subset=["duracion_min"])
+    data["duracion_min"] = pd.to_numeric(data["duracion_min"], errors="coerce")
+
+    agrupado = data.groupby("genero", as_index=False)["duracion_min"].mean()
+
+    fig_cuatro = px.bar(agrupado,
+                 x="genero", y="duracion_min",
+                 title="Duracion Promedio de Peliculas por Genero",
+                 labels={"genero":"Genero", "duracion_min":"Duracion promedio(minutos)"},
+                 text="duracion_min"
+                 )
+    fig_cuatro.update_layout(
+        xaxis_title="Genero",
+        yaxis_title="Duracion promedio(minutos)",
         template="plotly_dark"
     )
+    fig_cuatro.update_traces(marker_color="#f5c518", textposition="outside")
     return fig_cuatro
 
 
@@ -106,9 +108,10 @@ def test():
                 dcc.Graph(id="figDistCalificaciones")
             ],width=6),
             dbc.Col([
-                html.H4("Duración Promedio por Género",style={"color":"#FFFFFF"}),
-                dcc.Graph(id="figDuracionGenero")
-            ],width=6)
+                html.H4("Distribución de Géneros", style={"color": "#FFFFFF"}),
+                dcc.Graph(id="figDistGeneros")
+            ], width=6)
+
         ], style={"margin-bottom":"20px"}),
 
         #FILA DOOOOS
@@ -118,27 +121,27 @@ def test():
                 dcc.Graph(id="figEstrenosFecha")
             ],width=6),
             dbc.Col([
-                html.H4("Distribución de Géneros", style={"color":"#FFFFFF"}),
-                dcc.Graph(id="figDistGeneros")
-            ],width=6)
+                html.H4("Duración Promedio por Género", style={"color": "#FFFFFF"}),
+                dcc.Graph(id="figDuracionGenero")
+            ], width=6)
         ], style={"margin-bottom":"20px"})
     ], style={"background-color":"#000000", "padding":"20px"})
     return body
 
 @callback([
     Output("figDistCalificaciones", "figure"),
-    Output("figDuracionGenero", "figure"),
+    Output("figDistGeneros", "figure"),
     Output("figEstrenosFecha", "figure"),
-    Output("figDistGeneros", "figure")
+    Output("figDuracionGenero", "figure"),
 ],
     Input("ddAñoGeneral","value")
 )
 def update_grafica(value_año):
     filtrado = data[data["estreno"].dt.year == value_año]
     fig_calificaciones = distribucion_calificaciones(filtrado)
-    fig_duracion = duracion_promedio_genero(filtrado)
-    fig_estrenos = estrenos_fecha(filtrado)
     fig_generos = distribucion_generos(filtrado)
+    fig_estrenos = estrenos_fecha(filtrado)
+    fig_duracion = duracion_promedio_genero(filtrado)
 
 
-    return fig_calificaciones,fig_duracion,fig_estrenos,fig_generos
+    return fig_calificaciones,fig_generos,fig_estrenos,fig_duracion
