@@ -2,12 +2,16 @@ import dash
 import dash_bootstrap_components as dbc
 from click import style
 # import dash_2 as d2
+import pandas as pd
 from dash import Input, Output, dcc, html, callback
 # import dashboard as ds
 import informacion as info
 import Peliculas as Dp
+import series as se
 
-# PAGINA PRINCIPAL
+data = pd.read_csv("DATA/Df_Series_Limpio")
+
+
 @callback(Output("page-content", "children"), [Input("url", "pathname")])
 def render_page_content(pathname):
     if pathname == "/":
@@ -15,7 +19,7 @@ def render_page_content(pathname):
     elif pathname == "/page-1":  # DASHBOARD Peliculas
         return Dp.test() #yoyo vanesa
     elif pathname == "/page-2": # DASHBOARD SERIES
-        return html.P("Pagina :3")
+        return se.dashboard()
     return html.Div(
         [
             html.H1("404: Not found", className="text-danger"),
@@ -48,7 +52,7 @@ def menu_dashboard():
 
     content = html.Div(id="page-content", className="CONTENT_STYLE")
 
-    return html.Div([dcc.Location(id="url"), sidebar, content]) # juntar sidebar con el contenido
+    return html.Div([dcc.Location(id="url"), sidebar, content])
 
 
 

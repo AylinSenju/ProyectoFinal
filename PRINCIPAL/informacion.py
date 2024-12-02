@@ -51,8 +51,3 @@ def welcome():
     )
     return body
 
-
-if __name__ == "__main__":
-    app = Dash(__name__, external_stylesheets=[dbc.themes.CYBORG])  # Tema Bootstrap oscuro
-    app.layout = welcome()
-    app.run_server(debug=True)
