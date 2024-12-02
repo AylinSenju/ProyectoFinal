@@ -25,7 +25,6 @@ def distribucion_calificaciones(data):
     fig.update_traces(marker_color='#f5c518')
     return fig
 
-#ANTES ERA LA CUATROOO
 def distribucion_generos(data):
     generos= data["genero"].value_counts().reset_index()
     generos.columns=["genero", "cantidad"]
@@ -39,7 +38,6 @@ def distribucion_generos(data):
     )
     return fig_dos
 
-
 def estrenos_fecha(data):
     agrupado = data.groupby("estreno",as_index=False).size()
     fig_tres=px.line(agrupado,
@@ -52,8 +50,6 @@ def estrenos_fecha(data):
     )
     return fig_tres
 
-
-#ANTES ERA LA DOSSS
 def duracion_promedio_genero(data):
     data = data.dropna(subset=["duracion_min"])
     data["duracion_min"] = pd.to_numeric(data["duracion_min"], errors="coerce")
