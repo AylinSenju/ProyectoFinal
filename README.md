@@ -48,18 +48,25 @@ El objetivo es organizar y almacenar esta información en una base de datos estr
 <div>
    <h3>Instrucciones</h3>
    <p>
-   NOTA: Puede directamente correr el archivo "pagina", esto debido a que ya se tiene cargada la informacion y directamente revisar los dashboards de la pagina. para no perde tiempo ;)
+   NOTA 1: Puede directamente correr el archivo "pagina", esto debido a que ya se tiene cargada la informacion y directamente revisar los dashboards de la pagina. para no perder tiempo ;)
    </p>
    <p>1.- Seleccione el archivos Web_scraping, este realizara una busqueda por la pagina de sensacine.com, obtieniendo informacion acerca de peliculas y series
    , y despues de eso se guardara en un archivo CSV.
    </p>
-   <p>2.- Seleccione 
-     
+   <p>
+     2.- Seleccione el archivo de limpieza, que limpiara en caso de que se necesite, asi como cambiara el formato del de las fechas y las calificaciones para que lo pueda leer correctamente MySQL y deespues 
+      guardaran un archivos CSV que este limpio para despues guardarlo en MySQL.
    </p>
-
-  
+   <p>
+     3.- Despues de eso seleccione los archivos de Migracion_series y Migracion_peliculas, los cuales se encargaran de pasar los datos del CSV a una base de datos con dos tablas, una sera dedicada a series y otra      a peliculas con sus respectivas columnas y registros.
+   </p>
+   <p>
+     4.- Seleccione el archivo pagina, donde despues de correrlo se vera una direccion donde se accede y se muestran toda la informacion, asi como los dashboards
+   </p>
+  <p>
+    NOTA 2: Los archivos peliculas y series son las estructuras de los dashboard, y el archivo informacion, es para dar un poco de contexto de la realizacion del proyecto, asi como los nombres de los integrantes
+  </p>
 </div>
-
 </hr>
 
 
