@@ -21,7 +21,6 @@ def welcome():
                             html.Li("Biron Jadhiel Gonzalez Ramírez"),
                             html.Li("Aylin Yael Mascareño Zendejas"),
                             html.Li("Sherlyn Ramirez Velazquez"),
-                            html.Li("Gabriel Romero Jeronimo"),
                             html.Li("Angelica Vanesa Tapia Carro"),
                         ],
                         style={"color": "black"},
@@ -46,12 +45,19 @@ def welcome():
                     ),
                     html.H4("Dashboards:", style={"color": "#f5c518"}),
                     html.P(
-                         "DASHBOARD PELICULAS:\n"
-                         "En esta seecion presentaremos 4 graficas donde se van a poder apreciar las dsitribucion de pelicuals"
-                         "por genero, calificacion y la duracion promedio por genero. En la parte superior vemos un caja donde se seleccionaran"
-                         "los años para que nos de estadisticas de dichos años y como ultima grafica tenemos las fechas de estreno del año seleccionado",
+                         "DASHBOARD PELICULAS:"
+                         " En esta seccion presentaremos 4 graficas donde se van a poder apreciar las distribucion de peliculas"
+                         " por genero, calificacion y la duracion promedio por genero. En la parte superior vemos un caja donde se seleccionaran"
+                         " los años para que nos de estadisticas de dichos años y como ultima grafica tenemos las fechas de estreno del año seleccionado",
                          style={"color": "black"},
-                ),
+                    ),
+
+                     html.P(
+                        "DASHBOARD SERIES:"
+                        " En esta otra seccion se presentara garficas, las cuales ayudana poder visualizar"
+                        " las mejores series dividias por  mejores/ peores, promedio de calificacion por genero, top 5 por genero y"
+                        " la distribucion de calificaciones que hay de todas las series. ",
+                        style={"color": "black"},),
                 ],
                 style={"padding": "20px"},
             ),
