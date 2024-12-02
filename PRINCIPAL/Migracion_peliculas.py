@@ -69,7 +69,7 @@ class Migracion1:
 
 
 if __name__=="__main__":
-    df=pd.read_csv("DATA/Df_Peliculas_Limpio")
+    df=pd.read_csv("DATA/Df_Peliculas_Limpio1")
     password = "Bairon179"
     migracion=Migracion1("localhost","root",password,"cinema_bd",df)
     migracion.conectar_servidor()
