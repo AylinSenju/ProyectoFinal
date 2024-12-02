@@ -44,6 +44,14 @@ def welcome():
                         "como calificaciones, géneros más populares, las más taquilleras, etc.",
                         style={"color": "black"},
                     ),
+                    html.H4("Dashboards:", style={"color": "#f5c518"}),
+                    html.P(
+                         "DASHBOARD PELICULAS:\n"
+                         "En esta seecion presentaremos 4 graficas donde se van a poder apreciar las dsitribucion de pelicuals"
+                         "por genero, calificacion y la duracion promedio por genero. En la parte superior vemos un caja donde se seleccionaran"
+                         "los años para que nos de estadisticas de dichos años y como ultima grafica tenemos las fechas de estreno del año seleccionado",
+                         style={"color": "black"},
+                ),
                 ],
                 style={"padding": "20px"},
             ),
