@@ -5,8 +5,8 @@
   <h3> <b>Integrantes:</b> </h3>
   <div>
     <ul>
-      <li>Gonzales Preciado Angel Javier</li>
-      <li>Gonzales Ramirez Biron Jahdiel</li>
+      <li>Gonzalez Preciado Angel Javier</li>
+      <li>Gonzalez Ramirez Biron Jahdiel</li>
       <li>Mascareño Zendejas Aylin Yael</li>
       <li>Ramirez Velazquez Sherlyn</li>
       <li>Tapia Carro Angelica Vanesa</li>
