@@ -1,6 +1,5 @@
 import dash
 import dash_bootstrap_components as dbc
-from click import style
 # import dash_2 as d2
 import pandas as pd
 from dash import Input, Output, dcc, html, callback
