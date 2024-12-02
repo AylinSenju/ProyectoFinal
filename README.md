@@ -5,8 +5,8 @@
   <h3> <b>Integrantes:</b> </h3>
   <div>
     <ul>
-      <li>Gonzales Preciado Angel Javier</li>
-      <li>Gonzales Ramirez Biron Jahdiel</li>
+      <li>Gonzalez Preciado Angel Javier</li>
+      <li>Gonzalez Ramirez Biron Jahdiel</li>
       <li>Mascareño Zendejas Aylin Yael</li>
       <li>Ramirez Velazquez Sherlyn</li>
       <li>Tapia Carro Angelica Vanesa</li>
@@ -44,3 +44,22 @@ El objetivo es organizar y almacenar esta información en una base de datos estr
   <p>Los usuarios podrán acceder a una plataforma que les permitirá extraer, organizar y mostrar de manera eficiente datos clave de películas y series. El sistema debe poder recopilar información precisa a través del web scraping, almacenar esa información en una base de datos con precisión y proporcionar a los usuarios un panel interactivo para explorar estos datos, lo que facilita la identificación de patrones, tendencias y la toma de decisiones en la industria del entretenimiento.
 </p>
 </div>
+<hr>
+<div>
+   <h3>Instrucciones</h3>
+   <p>
+   NOTA: Puede directamente correr el archivo "pagina", esto debido a que ya se tiene cargada la informacion y directamente revisar los dashboards de la pagina. para no perde tiempo ;)
+   </p>
+   <p>1.- Seleccione el archivos Web_scraping, este realizara una busqueda por la pagina de sensacine.com, obtieniendo informacion acerca de peliculas y series
+   , y despues de eso se guardara en un archivo CSV.
+   </p>
+   <p>2.- Seleccione 
+     
+   </p>
+
+  
+</div>
+
+</hr>
+
+
