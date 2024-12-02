@@ -44,3 +44,18 @@ El objetivo es organizar y almacenar esta información en una base de datos estr
   <p>Los usuarios podrán acceder a una plataforma que les permitirá extraer, organizar y mostrar de manera eficiente datos clave de películas y series. El sistema debe poder recopilar información precisa a través del web scraping, almacenar esa información en una base de datos con precisión y proporcionar a los usuarios un panel interactivo para explorar estos datos, lo que facilita la identificación de patrones, tendencias y la toma de decisiones en la industria del entretenimiento.
 </p>
 </div>
+<hr>
+<div>
+   <h3>Instrucciones</h3>
+   <p>
+   Prueba
+
+     
+   </p>
+
+  
+</div>
+
+</hr>
+
+
