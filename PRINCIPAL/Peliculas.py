@@ -13,7 +13,6 @@ data["duracion_min"] = data["duracion"].str.extract(r"(\d+)").astype(float)
 
 def distribucion_calificaciones(data):
     fig = px.histogram(data, x="calificacion", nbins=10,
-                       title="Distribución de Calificaciones de Peliculas",
                        labels={"calificacion": "Calificación"},
                        text_auto=True)
 
@@ -26,7 +25,6 @@ def distribucion_calificaciones(data):
     fig.update_traces(marker_color='#f5c518')
     return fig
 
-#ANTES ERA LA CUATROOO
 def distribucion_generos(data):
     generos= data["genero"].value_counts().reset_index()
     generos.columns=["genero", "cantidad"]
@@ -35,18 +33,15 @@ def distribucion_generos(data):
         generos,
         names="genero",
         values="cantidad",
-        title="Distribucion de Generos de Peliculas",
         color="genero",
         template="plotly_dark"
     )
     return fig_dos
 
-
 def estrenos_fecha(data):
     agrupado = data.groupby("estreno",as_index=False).size()
     fig_tres=px.line(agrupado,
                      x="estreno", y="size",
-                     title="Cantidad de Estrenos por Fecha",
                      labels={"estreno":"Fecha Estreno", "size":"Cantidad de Peliculas"})
     fig_tres.update_layout(
         xaxis_title="Fecha de Estreno",
@@ -55,8 +50,6 @@ def estrenos_fecha(data):
     )
     return fig_tres
 
-
-#ANTES ERA LA DOSSS
 def duracion_promedio_genero(data):
     data = data.dropna(subset=["duracion_min"])
     data["duracion_min"] = pd.to_numeric(data["duracion_min"], errors="coerce")
@@ -65,7 +58,6 @@ def duracion_promedio_genero(data):
 
     fig_cuatro = px.bar(agrupado,
                  x="genero", y="duracion_min",
-                 title="Duracion Promedio de Peliculas por Genero",
                  labels={"genero":"Genero", "duracion_min":"Duracion promedio(minutos)"},
                  text="duracion_min"
                  )
@@ -104,7 +96,7 @@ def test():
         #FILA UNOOOO
         dbc.Row([
             dbc.Col([
-                html.H4("Distribucion de Calificaciones",style={"color":"#FFFFFF"}),
+                html.H4("Distribución de Calificaciones",style={"color":"#FFFFFF"}),
                 dcc.Graph(id="figDistCalificaciones")
             ],width=6),
             dbc.Col([
