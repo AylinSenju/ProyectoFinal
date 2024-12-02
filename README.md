@@ -48,8 +48,12 @@ El objetivo es organizar y almacenar esta información en una base de datos estr
 <div>
    <h3>Instrucciones</h3>
    <p>
-   Prueba
-
+   NOTA: Puede directamente correr el archivo "pagina", esto debido a que ya se tiene cargada la informacion y directamente revisar los dashboards de la pagina. para no perde tiempo ;)
+   </p>
+   <p>1.- Seleccione el archivos Web_scraping, este realizara una busqueda por la pagina de sensacine.com, obtieniendo informacion acerca de peliculas y series
+   , y despues de eso se guardara en un archivo CSV.
+   </p>
+   <p>2.- Seleccione 
      
    </p>
 
