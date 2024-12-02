@@ -8,66 +8,137 @@ import dash_bootstrap_components as dbc
 data = pd.read_csv("data/Df_Peliculas_Limpio")
 
 data["estreno"] = pd.to_datetime(data["estreno"], errors="coerce")
+data["duracion_min"] = data["duracion"].str.extract(r"(\d+)").astype(float)
 
-data["mes_estreno"] = data["estreno"].dt.month
 
-def distribucion_estrenos_por_mes(data):
-    fig = px.histogram(data, x="mes_estreno", nbins=12,
-                       title="Distribución de Estrenos por Mes",
-                       labels={"mes_estreno": "Mes de Estreno"},
-                       category_orders={
-                           'mes_estreno': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-                       })
+def distribucion_calificaciones(data):
+    fig = px.histogram(data, x="calificacion", nbins=10,
+                       title="Distribución de Calificaciones de Peliculas",
+                       labels={"calificacion": "Calificación"},
+                       text_auto=True)
 
     fig.update_layout(
-        xaxis_title="Mes de Estreno",
+        xaxis_title="Calificación",
         yaxis_title="Número de Películas",
         template="plotly_dark",
-        xaxis=dict(
-            tickmode="array",
-            tickvals=list(range(1, 13)),
-            ticktext=["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
-                      "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
-        )
+        bargap=0.2
     )
     fig.update_traces(marker_color='#f5c518')
     return fig
 
+
+def duracion_promedio_genero(data):
+    data = data.dropna(subset=["duracion_min"])
+    data["duracion_min"] = pd.to_numeric(data["duracion_min"], errors="coerce")
+
+    agrupado = data.groupby("genero", as_index=False)["duracion_min"].mean()
+
+    fig_dos = px.bar(agrupado,
+                 x="genero", y="duracion_min",
+                 title="Duracion Promedio de Peliculas por Genero",
+                 labels={"genero":"Genero", "duracion_min":"Duracion promedio(minutos)"},
+                 text="duracion_min"
+                 )
+    fig_dos.update_layout(
+        xaxis_title="Genero",
+        yaxis_title="Duracion promedio(minutos)",
+        template="plotly_dark"
+    )
+    fig_dos.update_traces(marker_color="#f5c518", textposition="outside")
+    return fig_dos
+
+
+def estrenos_fecha(data):
+    agrupado = data.groupby("estreno",as_index=False).size()
+    fig_tres=px.line(agrupado,
+                     x="estreno", y="size",
+                     title="Cantidad de Estrenos por Fecha",
+                     labels={"estreno":"Fecha Estreno", "size":"Cantidad de Peliculas"})
+    fig_tres.update_layout(
+        xaxis_title="Fecha de Estreno",
+        yaxis_title="Cantidad de Peliculas",
+        template="plotly_dark"
+    )
+    return fig_tres
+
+def distribucion_generos(data):
+    generos= data["genero"].value_counts().reset_index()
+    generos.columns=["genero", "cantidad"]
+
+    fig_cuatro=px.pie(
+        generos,
+        names="genero",
+        values="cantidad",
+        title="Distribucion de Generos de Peliculas",
+        color="genero",
+        template="plotly_dark"
+    )
+    return fig_cuatro
+
+
 def test():
-    fig_dist_estrenos = distribucion_estrenos_por_mes(data)
 
     body = html.Div([
-        html.H3("Distribución de Estrenos por Mes", style={"color":"#FFFFFF"}),
-        html.P("Análisis de la distribución de estrenos en diferentes meses del año", style={"color":"#FFFFFF"}),
+        html.H3("Dashboard de Peliculas", style={"color":"#FFFFFF", "text-aling":"center"}),
 
-        dcc.Dropdown(
-            options=[
-                {"label": "2021", "value": 2021},
-                {"label": "2022", "value": 2022},
-                {"label": "2023", "value": 2023},
-            ],
-            value="2023",
-            id="ddAño"
-        ),
-        html.Hr(),
-        dcc.Graph(figure=fig_dist_estrenos, id="figDistEstrenos")
-    ],
-    style={
-        "background-color": "#000000"
-    })
+        #DROPDOWN
+        dbc.Row([
+            dbc.Col([
+                html.H4("Seleccione el Año", style={"color":"#FFFFFF"}),
+                dcc.Dropdown(
+                    options=[
+                        {"label":"2021", "value":2021},
+                        {"label": "2022", "value": 2022},
+                        {"label": "2023", "value": 2023},
+                        {"label": "2024", "value": 2024},
+                    ],
+                    value=2024,
+                    id="ddAñoGeneral",
+                    style={"color":"#000000"}
+                )
+            ],width=12)
+        ],style={"margin-bottom":"20px"}),
 
+        #FILA UNOOOO
+        dbc.Row([
+            dbc.Col([
+                html.H4("Distribucion de Calificaciones",style={"color":"#FFFFFF"}),
+                dcc.Graph(id="figDistCalificaciones")
+            ],width=6),
+            dbc.Col([
+                html.H4("Duración Promedio por Género",style={"color":"#FFFFFF"}),
+                dcc.Graph(id="figDuracionGenero")
+            ],width=6)
+        ], style={"margin-bottom":"20px"}),
+
+        #FILA DOOOOS
+        dbc.Row([
+            dbc.Col([
+                html.H4("Cantidad de Estrenos por Fecha", style={"color":"#FFFFFF"}),
+                dcc.Graph(id="figEstrenosFecha")
+            ],width=6),
+            dbc.Col([
+                html.H4("Distribución de Géneros", style={"color":"#FFFFFF"}),
+                dcc.Graph(id="figDistGeneros")
+            ],width=6)
+        ], style={"margin-bottom":"20px"})
+    ], style={"background-color":"#000000", "padding":"20px"})
     return body
 
-@callback(
-    Output(component_id="figDistEstrenos", component_property="figure"),
-    Input(component_id="ddAño", component_property="value")
+@callback([
+    Output("figDistCalificaciones", "figure"),
+    Output("figDuracionGenero", "figure"),
+    Output("figEstrenosFecha", "figure"),
+    Output("figDistGeneros", "figure")
+],
+    Input("ddAñoGeneral","value")
 )
 def update_grafica(value_año):
-    if value_año == "all":
-        filtered_data = data
-    else:
-        filtered_data = data[data["estreno"].dt.year == value_año]
+    filtrado = data[data["estreno"].dt.year == value_año]
+    fig_calificaciones = distribucion_calificaciones(filtrado)
+    fig_duracion = duracion_promedio_genero(filtrado)
+    fig_estrenos = estrenos_fecha(filtrado)
+    fig_generos = distribucion_generos(filtrado)
 
-    fig_dist_estrenos = distribucion_estrenos_por_mes(filtered_data)
 
-    return fig_dist_estrenos
+    return fig_calificaciones,fig_duracion,fig_estrenos,fig_generos
