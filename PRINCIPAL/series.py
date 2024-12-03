@@ -68,7 +68,6 @@ def dashboard():
                 dbc.Col(
                     html.Div([
                         html.H4("Selecciona una gráfica:", style={"color": "#f5c518"}),
-                        html.Hr(),
                         dcc.Dropdown(
                             id="graph-dropdown",
                             options=[
@@ -79,10 +78,10 @@ def dashboard():
                                 {"label": "Distribución de Calificaciones", "value": "distribucion"}
                             ],
                             placeholder="Selecciona una opción",
-                            style={"width": "50%", "padding": "3px"}
+                            style={"padding":"0", "margin": "0"}
                         ),
                         html.Div(id="graph-container")
-                    ], style={"backgroundColor": "#FFFFFF", "padding": "20px"})
+                    ], style={"backgroundColor": "#000000", "padding": "20px"})
                 )
             ]
         ),
@@ -92,23 +91,38 @@ def dashboard():
 @callback(Output("graph-container", "children"), [Input("graph-dropdown", "value")])
 def update_grafica(selected_graph):
     if selected_graph == "mejores":
-        return dcc.Graph(figure=mejores(data))
+        return html.Div([
+            html.Hr(),
+            dcc.Graph(figure=mejores(data))
+            ])
     elif selected_graph == "peores":
-        return dcc.Graph(figure=peores(data))
+        return html.Div([
+            html.Hr(),
+            dcc.Graph(figure=peores(data))
+            ])
     elif selected_graph == "genero":
-        return dcc.Graph(figure=genero(data))
+        return html.Div([
+            html.Hr(),
+            dcc.Graph(figure=genero(data))
+            ])
     elif selected_graph == "top_por_genero":
         return html.Div([
+            html.Hr(),
+            html.H4("Selecciona un Género:", style={"color": "#f5c518", "margin-bottom": "10px"}),
             dcc.Dropdown(
                 id="genre-dropdown",
                 options=[{"label": genero, "value": genero} for genero in data["genero"].unique()],
                 placeholder="Selecciona un género",
-                style={"width": "50%", "margin-bottom": "20px"}
+                style={"padding":"0", "margin":"0"}
             ),
+            html.Hr(),
             html.Div(id="top-graph-container")
-        ])
+            ])
     elif selected_graph == "distribucion":
-        return dcc.Graph(figure=distribucion(data))
+        return html.Div([
+            html.Hr(),
+            dcc.Graph(figure=distribucion(data))
+            ])
     return html.Div()
 
 
