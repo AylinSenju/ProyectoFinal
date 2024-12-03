@@ -70,7 +70,7 @@ def duracion_promedio_genero(data):
     return fig_cuatro
 
 
-def test():
+def dashboard():
 
     body = html.Div([
         html.H3("Dashboard de Peliculas", style={"color":"#FFFFFF", "text-aling":"center"}),

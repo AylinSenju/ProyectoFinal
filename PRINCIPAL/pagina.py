@@ -7,18 +7,20 @@ from dash import Input, Output, dcc, html, callback
 import informacion as info
 import Peliculas as Dp
 import series as se
+import Series_Peliculas as sp
 
 data = pd.read_csv("DATA/Df_Series_Limpio")
-
 
 @callback(Output("page-content", "children"), [Input("url", "pathname")])
 def render_page_content(pathname):
     if pathname == "/":
         return info.welcome()
     elif pathname == "/page-1":  # DASHBOARD Peliculas
-        return Dp.test() #yoyo vanesa
+        return Dp.dashboard() #yoyo vanesa
     elif pathname == "/page-2": # DASHBOARD SERIES
         return se.dashboard()
+    elif pathname == "/page-3": # DASHBOARD SERIES Y PELICULAS
+        return sp.dasboard()
     return html.Div(
         [
             html.H1("404: Not found", className="text-danger"),
@@ -40,6 +42,7 @@ def menu_dashboard():
                     dbc.NavLink("Presentación", href="/", active="exact"),
                     dbc.NavLink("Dashboard Peliculas", href="/page-1", active="exact"),
                     dbc.NavLink("Dashboard Series", href="/page-2", active="exact"),
+                    dbc.NavLink("Dashboard Peliculas y Series", href="/page-3", active="exact"),
                     dbc.NavLink("GitHub", href="https://github.com/AylinSenju/ProyectoFinal", active="exact", target="_blank"), # REVISAR LINK
                 ],
                 vertical=True,
