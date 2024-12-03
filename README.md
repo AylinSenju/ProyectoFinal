@@ -68,5 +68,20 @@ El objetivo es organizar y almacenar esta información en una base de datos estr
   </p>
 </div>
 </hr>
+<hr>
+<div>
+<h3>Librerias utilizadas</h3>
+<p>dash: Se utiliza en este proyecto para la creacion visual de los dashboard.
+
+<p>dash_bootstrap_components: Nos brinda componentes pre-diseñados y responsivos que mejoran la apariencia de las aplicaciones Dash.</p>
+<p>pandas: Se uriliza para la limpieza de datos, asi como para pasar de Dataframe a CSV y para leer MySQL.</p>
+<p>mysql.connector: Se utiliza para lamigracion de peliculas y series hacia MySQL.</p>
+<p>plotly: Nos ayuda a crear graficos intractivos.</p>
+<p>webdriver_manager: Para poder movernos a traves de las paginas web al hacer nuestro Bot que recolecta infromacion paara despues analizarla</p>
+<p>Selenium: Nos ayuda a automatizar  navegadores web para tareas como pruebas o scraping.</p>
+<p>bs4: Se utiliza para analizar documentos HTML que obtenemos, esto para su posterior guardado.</p>
+</div>
+</hr>
+
 
 
