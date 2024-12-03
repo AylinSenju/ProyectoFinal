@@ -58,13 +58,13 @@ El objetivo es organizar y almacenar esta información en una base de datos estr
       guardaran un archivos CSV que este limpio para despues guardarlo en MySQL.
    </p>
    <p>
-     3.- Despues de eso seleccione los archivos de Migracion_series y Migracion_peliculas, los cuales se encargaran de pasar los datos del CSV a una base de datos con dos tablas, una sera dedicada a series y otra      a peliculas con sus respectivas columnas y registros.
+     3.- Despues de eso seleccione los archivos de Migracion_series y Migracion_peliculas, los cuales se encargaran de pasar los datos del CSV a una base de datos con dos tablas, una sera dedicada a series y otra      a peliculas con sus respectivas columnas y registros. (NO es necesario crear la base de datos en MySQL)
    </p>
    <p>
      4.- Seleccione el archivo pagina, donde despues de correrlo se vera una direccion donde se accede y se muestran toda la informacion, asi como los dashboards
    </p>
   <p>
-    NOTA 2: Los archivos peliculas y series son las estructuras de los dashboard, y el archivo informacion, es para dar un poco de contexto de la realizacion del proyecto, asi como los nombres de los integrantes
+    NOTA 2: Los archivos peliculas, series y peliculas_series son las estructuras de los dashboard, y el archivo informacion, es para dar un poco de contexto de la realizacion del proyecto, asi como los nombres de los integrantes, las funciones de estos archivos se mandan a llamar dentro del archivo de pagina.
   </p>
 </div>
 </hr>
