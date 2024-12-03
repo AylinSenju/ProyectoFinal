@@ -58,6 +58,13 @@ def welcome():
                         " las mejores series dividias por  mejores/ peores, promedio de calificacion por genero, top 5 por genero y"
                         " la distribucion de calificaciones que hay de todas las series. ",
                         style={"color": "black"},),
+                    html.P(
+                      "DASBOARD PELICULAS Y SERIES: "
+                      "Divido por genero, en este dashboard se presenta la informacion acerca de la distribucion de calificacion"
+                      " de peliculas y series, asi como el promedio de estas, del genero seleccionado, asi como la popularidad del genero"
+                      " en peliculas y serie y por utlimo los creadores/directores con mas producciones dentro del mismo genero."
+
+                    ),
                 ],
                 style={"padding": "20px"},
             ),
