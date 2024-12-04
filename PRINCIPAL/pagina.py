@@ -15,7 +15,7 @@ data = pd.read_csv("DATA/Df_Series_Limpio")
 def render_page_content(pathname):
     if pathname == "/":
         return info.welcome()
-    elif pathname == "/page-1":  # DASHBOARD Peliculas
+    elif pathname == "/page-1":  # DASHBOARD PELICULAS
         return Dp.dashboard() #yoyo vanesa
     elif pathname == "/page-2": # DASHBOARD SERIES
         return se.dashboard()
